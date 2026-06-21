@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Photographer & Video Editor</title>
+    <!-- Google Fonts for Modern Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0c0f12;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        /* 9:16 Mobile Container Mockup */
+        .phone-container {
+            width: 100%;
+            max-width: 410px; /* Standard Mobile Width */
+            aspect-ratio: 9 / 16;
+            background: linear-gradient(145deg, #131920, #080b0e);
+            border: 4px solid #1f2937;
+            border-radius: 36px;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            -scrollbar-width: none; /* Hide Scrollbar for clean look */
+        }
+
+        .phone-container::-webkit-scrollbar {
+            display: none; /* Webkit hide scrollbar */
+        }
+
+        /* Hero / Main Header Section */
+        .hero-section {
+            padding: 30px 20px 20px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(212, 163, 89, 0.1), transparent);
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px auto;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #026078; /* Elegant Gold Border */
+        }
+
+        .pro-badge {
+            position: absolute;
+            bottom: 0;
+            right: 5px;
+            background-color: #026078;
+            color: #0c0f12;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-section h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .hero-section p {
+            font-size: 13px;
+            color: #026078;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Info & Bio Section */
+        .content-section {
+            padding: 20px;
+        }
+
+        .bio-text {
+            font-size: 13px;
+            color: #fefeff;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Features / Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background-color: #171e26;
+            border: 1px solid #026078;
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:active {
+            transform: scale(0.97);
+        }
+
+        .stat-card .icon {
+            font-size: 20px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .stat-card h3 {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .stat-card p {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        /* Recent Work / Placeholder Grid */
+        .portfolio-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portfolio-title span {
+            font-size: 11px;
+            color: #026078;
+            text-transform: uppercase;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .work-item {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #171e26;
+            border-radius: 12px;
+            border: 1px solid #25303d;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4b5563;
+            font-size: 11px;
+        }
+
+        /* Action Call Button */
+        .contact-btn {
+            display: block;
+            width: 200%;
+            background-color: #026078;
+            color: #0c0f12;
+            text-align: center;
+            padding: 14px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 14px rgba(212, 163, 89, 0.3);
+        }
+
+        .contact-btn:active {
+            background-color: #026078;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main 9:16 Mobile View -->
+    <div class="phone-container">
+        
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="avatar-wrapper">
+                <!-- Replace 'profile.jpg' with your actual image path later -->
+                <img src="r1.jpg" alt="Profile Picture" class="profile-img">
+                <span class="pro-badge">PRO</span>
+            </div>
+            <h1>Reyan Younis</h1>
+            <p>Video Editor</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-section">
+            <p class="bio-text">
+               I am Rayan Younis, an IT Institute graduate from Duhok Polytechnic University, with over twelve years of experience in video editing, as well as expertise in web development and photography.
+
+            <!-- Stats/Qualifications Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="icon">🎬</span>
+                    <h3>12+ Years</h3>
+                    <p>Video Editing</p>
+                </div>
+                <div class="stat-card">
+                    <span class="icon">📸</span>
+                    <h3>Expert</h3>
+                    <p>Photography</p>
+                </div>
+                <div class="stat-card" >
+                    <span class="icon">🎓</span>
+                    <h3>IT  Graduate</h3>
+                    <p>DPU</p>
+                </div>
+                  <div class="stat-card">
+                    <span class="icon">📸</span>
+                    <h3>Expert</h3>
+                    <p>Photography</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Showcase Section -->
+            <div class="portfolio-title">
+                <span>Recent Projects</span>
+             
+            </div>
+            
+            <div class="work-grid">
+                <div class="work-item">
+              <video width="100%" height="auto" controls>
+              <source src="video/reyan1.mov" type="video/mp4">
+             
+              </video>
+
+                </div>
+                <div class="work-item">[ Photography ]</div>
+                <div class="work-item">[ Video Project ]</div>
+                <div class="work-item">[ Photography ]</div>
+            </div>
+
+            <!-- Contact Button -->
+            <a href="mailto:yourcurrentemail@example.com" class="contact-btn">Let's Work Together</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
